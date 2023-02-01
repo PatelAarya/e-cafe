@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
+	style="background-image: url({% static 'images/3.jpg' %});" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="display-t js-fullheight">
+					<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+						<h1>Feedback</h1>
+						<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+<div id="fh5co-contact" class="fh5co-section animate-box">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<h2>Don't be shy, let's chat.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate,
+					sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga
+					maxime odio? Eaque!</p>
+				<p><a href="mailto:info@yourdomainname.com" class="btn btn-primary btn-outline">Contact Us</a></p>
+			</div>
+		</div>
+
+		<div class="row">
+
+
+			<!-- For Image In Registration Form-->
+
+
+			<div class="col-md-6 col-md-pull-1 img-wrap animate-box fadeInLeft animated-fast ">
+				<img src="{% static 'images/hero_11.jpeg' %}"
+					alt="Free Restaurant Bootstrap Website Template by FreeHTML5.co" width="700" height="470">
+			</div>
+			<!-- ---------------------------- -->
+
+
+
+			<div class="col-md-6 col-md-push-1  col-md-push-1 animate-box">
+
+				<form action="#" method="POST" id="form-wrap">
+
+					{% csrf_token %}
+					<div class="row form-group">
+						<div class="col-md-12">
+							<label for="name">First Name</label>
+							<input type="text" class="form-control" id="fname" name="fname">
+						</div>
+					</div>
+
+
+					<!--  -->
+					<div class="col text-center">
+						<span class="fa fa-star fa-2x checked"></span>
+						<span class="fa fa-star fa-2x checked"></span>
+						<span class="fa fa-star fa-2x checked"></span>
+						<span class="fa fa-star fa-2x"></span>
+						<span class="fa fa-star fa-2x"></span>
+					</div>
+					<!--  -->
+
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<label for="message">Your Message</label>
+							<textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+						</div>
+					</div>
+
+
+
+
+					<div class="container">
+						<span id="rateMe4" class="feedback"></span>
+					</div>
+
+
+
+
+
+
+					<div class="row form-group">
+						<div class="col-md-12">
+							<input type="submit" class="btn btn-primary btn-outline btn-lg" value="Submit Form">
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+{% endblock %}

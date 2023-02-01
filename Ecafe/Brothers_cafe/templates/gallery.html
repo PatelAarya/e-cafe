@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image: url({% static 'images/food_1.jpeg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="display-t js-fullheight">
+						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+							<h1>See <em>Our</em> Gallery</h1>
+							<h2>Brought to you by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	
+	<div id="fh5co-gallery" class="fh5co-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 fh5co-heading animate-box">
+					<h2>Our Gallery</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis. Ad magni perspiciatis, voluptatum repellat.</p>
+						</div>
+					</div>
+				</div>
+				
+
+
+								
+					
+				
+				<h1>{{forloop.counter}}</h1>
+				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+					{% for i in fgh123|slice:"0:2" %}
+					{% if forloop.counter == 1 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% if forloop.counter == 2 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% endfor %}
+				</div>
+
+				{% for i in fgh123|slice:"2:5" %}
+				{% if forloop.counter == 1 %}
+				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
+				<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+				</div>
+				{% endif %}
+				{% if forloop.counter == 2 or forloop.counter == 3 %}
+				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+				</div> 
+				{% endif %}
+
+				{% endfor %}
+
+				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+					{% for i in fgh123|slice:"5:7" %}
+					{% if forloop.counter == 1 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% if forloop.counter == 2 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% endfor %}
+				</div>
+				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+					{% for i in fgh123|slice:"7:9" %}
+					{% if forloop.counter == 1 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% if forloop.counter == 2 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% endfor %}
+				</div>
+
+				{% for i in fgh123|slice:"9:10" %}
+				{% if forloop.counter == 1 %}
+				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
+				<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+				</div>
+				{% endif %}
+				{% endfor %}
+ 				
+
+
+				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+					{% for i in fgh123|slice:"10:12" %}
+					{% if forloop.counter == 1 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% if forloop.counter == 2 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% endfor %}
+				</div>
+
+				{% for i in fgh123|slice:"12:15" %}
+				{% if forloop.counter == 1 %}
+				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
+				<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+				</div>
+				{% endif %}
+				{% if forloop.counter == 2 or forloop.counter == 3 %}
+				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+				</div> 
+				{% endif %}
+
+				{% endfor %}
+
+				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+					{% for i in fgh123|slice:"15:17" %}
+					{% if forloop.counter == 1 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% if forloop.counter == 2 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% endfor %}
+				</div>
+				<div class="col-md-3 col-sm-3 fh5co-gallery_item">
+					{% for i in fgh123|slice:"17:19" %}
+					{% if forloop.counter == 1 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% if forloop.counter == 2 %}
+					<div class="fh5co-bg-img" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+					{% endif %}
+					{% endfor %}
+				</div>
+
+				{% for i in fgh123|slice:"19:20" %}
+				{% if forloop.counter == 1 %}
+				<div class="col-md-6 col-sm-6 fh5co-gallery_item">
+				<div class="fh5co-bg-img fh5co-gallery_big" style="background-image: url({{ i.image_gallery.url }});" data-trigger="zoomerang"></div>
+				</div>
+				{% endif %}
+				{% endfor %}
+				
+
+			</div>
+		</div>
+	</div>
+
+
+
+	
+	<div id="fh5co-featured-testimony" class="fh5co-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 fh5co-heading animate-box">
+					<h2>Testimony</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam, itaque, nesciunt similique commodi omnis.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-5 animate-box img-to-responsive animate-box" data-animate-effect="fadeInLeft">
+						<img src="{% static 'images/person_1.jpg' %}" alt="">
+				</div>
+				<div class="col-md-7 animate-box" data-animate-effect="fadeInRight">
+					<blockquote>
+						<p> &ldquo; Quantum ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab debitis sit itaque totam, a maiores nihil, nulla magnam porro minima officiis! Doloribus aliquam voluptates corporis et tempora consequuntur ipsam. &rdquo;</p>
+						<p class="author"><cite>&mdash; Jane Smith</cite></p>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="fh5co-started" class="fh5co-section animate-box" style="background-image: url({% static 'images/hero_1.jpeg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Book a Table</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim quae vitae cupiditate, sequi quam ea id dolor reiciendis consectetur repudiandae. Rem quam, repellendus veniam ipsa fuga maxime odio? Eaque!</p>
+					<p><a href="mailto:info@yourdomainname.com" class="btn btn-primary btn-outline">Contact Us</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	{% endblock %}
